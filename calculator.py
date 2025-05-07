@@ -10,9 +10,11 @@ def real_payment_value(total_amount: float, month_number: int, inflation_rate: f
 
 def real_profit_value(start_value:float, end_value:float, days:int, inflation_rate: float) -> float:
     daily_inflation = (1 + inflation_rate / 100) ** (1 / 365) - 1
-    real_profit = (end_value - start_value) / ((1 + daily_inflation) ** days)
-    print(f"Real profit of investment: ${real_profit:.2f}")
-    return real_profit
+    end_value_real = end_value / ((1 + daily_inflation) ** days)
+    real_profit = end_value_real - start_value
+    real_profit_perc = real_profit / start_value *100
+    print(f"Real profit: ${real_profit:.2f}, %{real_profit_perc:.2f}, ")
+    return real_profit, real_profit_perc
 
 if __name__ == "__main__":
     None
