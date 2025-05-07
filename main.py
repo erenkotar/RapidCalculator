@@ -43,4 +43,4 @@ def calculate_real_value(
         days=day_number,
         inflation_rate=inflation_rate
     )
-    return {"real_value": round(result, 2)}
+    return {"real_profit": round(result[0], 2), "real_profit_percentage": round(result[1], 2)}
