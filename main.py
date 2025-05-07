@@ -10,10 +10,10 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {
-        "message": "Selam Hcoam, doc'a git bi zahmet",
+        "message": "Selam Hocam, doc'a git bi zahmet",
         "endpoints": {
             "real_payment_value": "/real_payment_value?total_amount=...&month_number=...&inflation_rate=...",
-            "real_profit_value": "/real_profit_value?start_value=...&end_value=...&day_number=...&inflation_rate=..."
+            "real_profit_values": "/real_profit_value?start_value=...&end_value=...&day_number=...&inflation_rate=..."
         }
     }
 
