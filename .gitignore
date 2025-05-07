@@ -1,0 +1,5 @@
+.DS_Store
+/yosun
+info.txt
+__pycache__/
+*.ipynb
